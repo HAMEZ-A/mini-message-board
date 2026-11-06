@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        <%= title %>
+    </title>
+</head>
+
+<body>
+    <h1>
+        <%= title %>
+    </h1>
+    <p>Welcome to our message board!</p>
+
+    <h1>
+        <%= title %>
+    </h1>
+
+    <% messages.forEach((message)=> { %>
+        <div>
+            <h2>
+                <%= message.user %>
+            </h2>
+            <p>
+                <%= message.text %>
+            </p>
+            <small>
+                <%= message.added.toLocaleString() %>
+            </small>
+        </div>
+        <% }); %>
+
+            <a href="/new">Write a New Message</a>
+</body>
+
+</html>
